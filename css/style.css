@@ -145,36 +145,34 @@
     /* ================================================================
                             Général
     ================================================================ */
-body{scroll-behavior: smooth;}
-header{height: 100vh;}
+    body{scroll-behavior: smooth;}
+    header{height: 100vh;}
+    nav a:hover{color: #fff;}   /* Hover sur les liens de la nav */
+    footer .fab:hover{color: #fff;} /* Hover sur les font icons du footer */
 
-/* Box ronde */
+    /* Box ronde */
 
-.rounded-div{
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 20%;
-    background: url(../img/photoprofil.jpg) no-repeat center center;
-    background-size: cover;
-}
+    .rounded-div{
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20%;
+        background: url(../img/photoprofil.jpg) no-repeat center center;
+        background-size: cover;
+    }
 
-/* Hover effet color white */
+    /* SVG Header */
 
-.effethover:hover{color: #fff;}
-
-/* SVG Header */
-
-#my-svg
-{
-    position: absolute;
-    bottom:0;
-    width: 100%;
-    z-index:2;
-}
+    #my-svg
+    {
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        z-index:2;
+    }
 
     /* ================================================================
                             Section 1 "Mes projets"
@@ -194,13 +192,13 @@ header{height: 100vh;}
 
         /* Effet sans hover */
 
-    .box
-    {
-        position:relative;
-        overflow: hidden;
-    }
+        .box
+        {
+            position:relative;
+            overflow: hidden;
+        }
 
-    .boximg{-webkit-transition: -webkit-transform 1s;transition: -webkit-transform 1s;transition: transform 1s;transition: transform 1s, -webkit-transform 1s;}
+        .boximg{-webkit-transition: -webkit-transform 1s;transition: -webkit-transform 1s;transition: transform 1s;transition: transform 1s, -webkit-transform 1s;}
 
     /* Effet avec hover */
 
@@ -265,7 +263,15 @@ header{height: 100vh;}
 
     .btn-submit{
         width: 140px;
+        border: none;
+        background-color: #0077b5;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 2px;
     }
+
+    .btn-submit:hover{background-color:#212121;}
+
     
     
     
