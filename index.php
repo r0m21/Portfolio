@@ -1,4 +1,5 @@
-﻿<!doctype html>
+﻿<?php require_once "php/traitements.php" ?>
+<!doctype html>
 <html lang="fr">
     <head>
         <meta charset="utf-8">
@@ -48,14 +49,23 @@
         <svg class="img-responsive" version="1.2" baseProfile="tiny" id="my-svg"
         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1600px" height="300px"
         viewBox="0 0 1600 300" xml:space="preserve">
-            <polygon fill="#fff" points="1606.581,312.701 -279.626,327.644 807.725,148.333 
+            <polygon fill="#f5f5f5" points="1606.581,312.701 -279.626,327.644 807.725,148.333 
             1636.463,-6.839 "/>
         </svg>            
     </header>
 
+<!-- Partie 1 About me -->
+    <section class="bg-3 ptb-80 w100">
+        <div class="container m-auto">
+            <h2 class="montserrat-medium color-5 fs-60">À propos</h2>
+
+        </div>
+        
+
+    </section>
+<!-- Partie 2 Projets -->
     <section class="bg-2">
-<!-- Partie 1 Projets -->
-        <section class="w100 pb-80" id="projet">
+        <section class="w100 ptb-80" id="projet">
             <div class="container m-auto">
             <h2 class="montserrat-medium color-5 fs-60">Mes projets</h2>
 
@@ -154,18 +164,19 @@
             </div>
         </section>
     </section>         
-<!-- Partie 2 CONTACT -->
+<!-- Partie 3 CONTACT -->
     <section id="contact" class="w100 ptb-80 bg-3">
         <div class="container m-auto">
             <h2 class="montserrat-medium color-5 fs-60">Contact</h2>
             <p class="mt-50 montserrat-regular color-5 fs-20">* Tous les champs sont requis.</p>
             <form class="mt-30 d-flex column wrap" method="POST" action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>">
                 <div class="w100">
-                    <input class="p-10 fs-20 raleway-medium border-1" name="last_name" type="text" placeholder="Votre nom *" required>
-                    <input class="p-10 fs-20 raleway-medium border-1" name="first_name" type="text" placeholder="Votre prénom *" required>
+                    <input class="p-10 fs-20 raleway-medium border-1" name="last_name" type="text" placeholder="Votre nom *">
+                    <input class="p-10 fs-20 raleway-medium border-1" name="first_name" type="text" placeholder="Votre prénom *" >
                 </div>
-                <input class="mt-30 p-10 fs-20 raleway-medium w100 border-1" name="email" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="exemple@gmail.com *" required>
-                <textarea class="mt-30 p-10 fs-20 raleway-medium w100 border-1" name="message" cols="30" rows="10" placeholder="Message *" required></textarea>      
+                <input class="mt-30 p-10 fs-20 raleway-medium w100 border-1" name="email" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="exemple@gmail.com *" >
+                <textarea class="mt-30 p-10 fs-20 raleway-medium w100 border-1" name="message" cols="30" rows="10" placeholder="Message *" ></textarea> 
+                <?php echo $error; ?>
                 <input class="btn-submit p-10 mt-30 montserrat-regular fs-25 m-auto" name="submit_form" type="submit" value="Envoyer">
             </form>
         </div>
